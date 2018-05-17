@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.i3xx.node</groupId>
+  <artifactId>org.i3xx.node.object</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <name>NordApp :: node :: object</name>
+  <scm>
+  	<developerConnection>scm:git:https://github.com/nordapp/util</developerConnection>
+  	<tag>org.i3xx.node-0.0.1</tag>
+  </scm>
+  <parent>
+  	<groupId>org.i3xx.parent</groupId>
+  	<artifactId>parent-project</artifactId>
+  	<version>0.3.0-SNAPSHOT</version>
+  </parent>
+</project>
