@@ -1,5 +1,7 @@
 package org.i3xx.node;
 
+import java.util.GregorianCalendar;
+
 /*
  * #%L
  * NordApp OfficeBase :: zero
@@ -47,9 +49,9 @@ public class BaseImpl implements Base {
 	//------------------------------------------------
 
 	//The id of this object (local identifier)
-	private String obid;
+	private long obid;
 	//The guid of this object (global identifier)
-	private String obguid;
+	private long obguid;
 	//The uuid of this object (universal identifier)
 	private String obuuid;
 	
@@ -58,9 +60,9 @@ public class BaseImpl implements Base {
 	//------------------------------------------------
 	
 	//The creation timestamp of this object
-	private String obctime;
+	private GregorianCalendar obctime;
 	//The update timestamp of this object
-	private String obutime;
+	private GregorianCalendar obutime;
 	//The history of this object
 	private String obhistory;
 	//The hash of this object
@@ -103,9 +105,13 @@ public class BaseImpl implements Base {
 	//The uuid of the object (universal identifier)
 	private String linkuuid;
 	
+	//------------------------------------------------
+	// End
+	//------------------------------------------------
+	
 	public BaseImpl() {
-		obid = null;
-		obguid = null;
+		obid = 0;
+		obguid = 0;
 		obuuid = null;
 		obctime = null;
 		obutime = null;
@@ -127,28 +133,28 @@ public class BaseImpl implements Base {
 	/**
 	 * @return the obid
 	 */
-	public String getObid() {
+	public long getObid() {
 		return obid;
 	}
 
 	/**
 	 * @param obid the obid to set
 	 */
-	public void setObid(String obid) {
+	public void setObid(long obid) {
 		this.obid = obid;
 	}
 
 	/**
 	 * @return the obguid
 	 */
-	public String getObguid() {
+	public long getObguid() {
 		return obguid;
 	}
 
 	/**
 	 * @param obguid the obguid to set
 	 */
-	public void setObguid(String obguid) {
+	public void setObguid(long obguid) {
 		this.obguid = obguid;
 	}
 
@@ -162,28 +168,28 @@ public class BaseImpl implements Base {
 	/**
 	 * @return the obctime
 	 */
-	public String getObctime() {
+	public GregorianCalendar getObctime() {
 		return obctime;
 	}
 
 	/**
 	 * @param obctime the obctime to set
 	 */
-	public void setObctime(String obctime) {
+	public void setObctime(GregorianCalendar obctime) {
 		this.obctime = obctime;
 	}
 
 	/**
 	 * @return the obutime
 	 */
-	public String getObutime() {
+	public GregorianCalendar getObutime() {
 		return obutime;
 	}
 
 	/**
 	 * @param obutime the obutime to set
 	 */
-	public void setObutime(String obutime) {
+	public void setObutime(GregorianCalendar obutime) {
 		this.obutime = obutime;
 	}
 

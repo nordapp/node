@@ -1,26 +1,28 @@
 package org.i3xx.node;
 
+import java.util.GregorianCalendar;
+
 public interface Base {
 	
 	/**
 	 * @return the obid
 	 */
-	String getObid();
+	long getObid();
 
 	/**
 	 * @param obid the obid to set
 	 */
-	void setObid(String obid);
+	void setObid(long obid);
 
 	/**
 	 * @return the obguid
 	 */
-	String getObguid();
+	long getObguid();
 
 	/**
 	 * @param obguid the obguid to set
 	 */
-	void setObguid(String obguid);
+	void setObguid(long obguid);
 
 	/**
 	 * @return the obuuid
@@ -30,22 +32,22 @@ public interface Base {
 	/**
 	 * @return the obctime
 	 */
-	String getObctime();
+	GregorianCalendar getObctime();
 
 	/**
 	 * @param obctime the obctime to set
 	 */
-	void setObctime(String obctime);
+	void setObctime(GregorianCalendar obctime);
 
 	/**
 	 * @return the obutime
 	 */
-	String getObutime();
+	GregorianCalendar getObutime();
 
 	/**
 	 * @param obutime the obutime to set
 	 */
-	void setObutime(String obutime);
+	void setObutime(GregorianCalendar obutime);
 
 	/**
 	 * @param obuuid the obuuid to set
