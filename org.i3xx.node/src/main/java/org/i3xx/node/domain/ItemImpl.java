@@ -1,4 +1,4 @@
-package org.i3xx.node;
+package org.i3xx.node.domain;
 
 import java.util.Map;
 
