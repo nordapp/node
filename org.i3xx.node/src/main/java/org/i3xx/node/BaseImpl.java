@@ -1,5 +1,6 @@
 package org.i3xx.node;
 
+import java.math.BigInteger;
 import java.util.GregorianCalendar;
 
 /*
@@ -49,9 +50,9 @@ public class BaseImpl implements Base {
 	//------------------------------------------------
 
 	//The id of this object (local identifier)
-	private long obid;
+	private Long obid;
 	//The guid of this object (global identifier)
-	private long obguid;
+	private Long obguid;
 	//The uuid of this object (universal identifier)
 	private String obuuid;
 	
@@ -66,9 +67,9 @@ public class BaseImpl implements Base {
 	//The history of this object
 	private String obhistory;
 	//The hash of this object
-	private String obhash;
+	private Long obhash;
 	//The flags of this object
-	private String obflags;
+	private BigInteger obflags;
 
 	//------------------------------------------------
 	// Naming section
@@ -110,14 +111,14 @@ public class BaseImpl implements Base {
 	//------------------------------------------------
 	
 	public BaseImpl() {
-		obid = 0;
-		obguid = 0;
+		obid = null;
+		obguid = null;
 		obuuid = null;
 		obctime = null;
 		obutime = null;
 		obhistory = null;
 		obhash = null;
-		obflags = null;
+		obflags = BigInteger.ZERO;
 		obname = null;
 		obalias = null;
 		obtitle = null;
@@ -133,28 +134,28 @@ public class BaseImpl implements Base {
 	/**
 	 * @return the obid
 	 */
-	public long getObid() {
+	public Long getObid() {
 		return obid;
 	}
 
 	/**
 	 * @param obid the obid to set
 	 */
-	public void setObid(long obid) {
+	public void setObid(Long obid) {
 		this.obid = obid;
 	}
 
 	/**
 	 * @return the obguid
 	 */
-	public long getObguid() {
+	public Long getObguid() {
 		return obguid;
 	}
 
 	/**
 	 * @param obguid the obguid to set
 	 */
-	public void setObguid(long obguid) {
+	public void setObguid(Long obguid) {
 		this.obguid = obguid;
 	}
 
@@ -217,28 +218,28 @@ public class BaseImpl implements Base {
 	/**
 	 * @return the obhash
 	 */
-	public String getObhash() {
+	public Long getObhash() {
 		return obhash;
 	}
 
 	/**
 	 * @param obhash the obhash to set
 	 */
-	public void setObhash(String obhash) {
+	public void setObhash(Long obhash) {
 		this.obhash = obhash;
 	}
 
 	/**
 	 * @return the obflags
 	 */
-	public String getObflags() {
+	public BigInteger getObflags() {
 		return obflags;
 	}
 
 	/**
 	 * @param obflags the obflags to set
 	 */
-	public void setObflags(String obflags) {
+	public void setObflags(BigInteger obflags) {
 		this.obflags = obflags;
 	}
 
@@ -403,7 +404,7 @@ public class BaseImpl implements Base {
 	 * @param param The parameter
 	 * @param id The id to insert
 	 */
-	public static String setCurrentId(String param, String id) {
+	public static final String setCurrentId(String param, String id) {
 		StringBuffer buf = new StringBuffer();
 		char[] cc = param.toCharArray();
 		

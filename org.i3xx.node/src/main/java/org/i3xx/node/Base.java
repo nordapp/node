@@ -1,28 +1,90 @@
 package org.i3xx.node;
 
+import java.math.BigInteger;
 import java.util.GregorianCalendar;
 
+/**
+ * The object represented by Base is primary represented by a map with the
+ * definition Map<String,Object>. There should be no object mapping except
+ * one is necessary.
+ * 
+ * Use the constants to get the value from the map.
+ * 
+ * @author green
+ *
+ */
 public interface Base {
+	
+	/** The id */
+	public static final String OB_ID = "ob:id";
+	
+	/** The guid */
+	public static final String OB_GUID = "ob:guid";
+	
+	/** The uuid */
+	public static final String OB_UUID = "ob:uuid";
+	
+	/** The creation time */
+	public static final String OB_CTIME = "ob:ctime";
+	
+	/** The update time */
+	public static final String OB_UTIME = "ob:utime";
+	
+	/** The history (uuid) */
+	public static final String OB_HISTORY = "ob:history";
+	
+	/** The hash */
+	public static final String OB_HASH = "ob:hash";
+	
+	/** The flags */
+	public static final String OB_FLAGS = "ob:flags";
+	
+	/** The name */
+	public static final String OB_NAME = "ob:name";
+	
+	/** The alias */
+	public static final String OB_ALIAS = "ob:alias";
+	
+	/** The title */
+	public static final String OB_TITLE = "ob:title";
+	
+	/** The description */
+	public static final String OB_DESCRIPTION = "ob:description";
+	
+	/** The root */
+	public static final String OB_ROOT = "ob:root";
+	
+	/** The mimetype */
+	public static final String OB_MIME = "ob:mime";
+	
+	/** The data */
+	public static final String OB_DATA = "ob:data";
+	
+	/** The uri */
+	public static final String OB_URI = "ob:uri";
+	
+	/** The link */
+	public static final String OB_LINK = "ob:link";
 	
 	/**
 	 * @return the obid
 	 */
-	long getObid();
+	Long getObid();
 
 	/**
 	 * @param obid the obid to set
 	 */
-	void setObid(long obid);
+	void setObid(Long obid);
 
 	/**
 	 * @return the obguid
 	 */
-	long getObguid();
+	Long getObguid();
 
 	/**
 	 * @param obguid the obguid to set
 	 */
-	void setObguid(long obguid);
+	void setObguid(Long obguid);
 
 	/**
 	 * @return the obuuid
@@ -67,22 +129,22 @@ public interface Base {
 	/**
 	 * @return the obhash
 	 */
-	String getObhash();
+	Long getObhash();
 
 	/**
 	 * @param obhash the obhash to set
 	 */
-	void setObhash(String obhash);
+	void setObhash(Long obhash);
 
 	/**
 	 * @return the obflags
 	 */
-	String getObflags();
+	BigInteger getObflags();
 
 	/**
 	 * @param obflags the obflags to set
 	 */
-	void setObflags(String obflags);
+	void setObflags(BigInteger obflags);
 
 	/**
 	 * @return the obname
@@ -183,5 +245,9 @@ public interface Base {
 	 * @param linkuuid the linkuuid to set
 	 */
 	void setLinkuuid(String linkuuid);
-
+	
+	/**
+	 * The refresh
+	 */
+	void refresh();
 }
