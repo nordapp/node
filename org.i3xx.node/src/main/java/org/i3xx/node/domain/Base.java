@@ -74,7 +74,7 @@ public interface Base {
 	/**
 	 * @param obid the obid to set
 	 */
-	void setObid(Long obid);
+	Base setObid(Long obid);
 
 	/**
 	 * @return the obguid
@@ -84,7 +84,7 @@ public interface Base {
 	/**
 	 * @param obguid the obguid to set
 	 */
-	void setObguid(Long obguid);
+	Base setObguid(Long obguid);
 
 	/**
 	 * @return the obuuid
@@ -99,7 +99,7 @@ public interface Base {
 	/**
 	 * @param obctime the obctime to set
 	 */
-	void setObctime(GregorianCalendar obctime);
+	Base setObctime(GregorianCalendar obctime);
 
 	/**
 	 * @return the obutime
@@ -109,12 +109,12 @@ public interface Base {
 	/**
 	 * @param obutime the obutime to set
 	 */
-	void setObutime(GregorianCalendar obutime);
+	Base setObutime(GregorianCalendar obutime);
 
 	/**
 	 * @param obuuid the obuuid to set
 	 */
-	void setObuuid(String obuuid);
+	Base setObuuid(String obuuid);
 
 	/**
 	 * @return the obhistory
@@ -124,7 +124,7 @@ public interface Base {
 	/**
 	 * @param obhistory the obhistory to set
 	 */
-	void setObhistory(String obhistory);
+	Base setObhistory(String obhistory);
 	
 	/**
 	 * @return the obhash
@@ -134,7 +134,7 @@ public interface Base {
 	/**
 	 * @param obhash the obhash to set
 	 */
-	void setObhash(Long obhash);
+	Base setObhash(Long obhash);
 
 	/**
 	 * @return the obflags
@@ -144,7 +144,7 @@ public interface Base {
 	/**
 	 * @param obflags the obflags to set
 	 */
-	void setObflags(BigInteger obflags);
+	Base setObflags(BigInteger obflags);
 
 	/**
 	 * @return the obname
@@ -154,7 +154,7 @@ public interface Base {
 	/**
 	 * @param obname the obname to set
 	 */
-	void setObname(String obname);
+	Base setObname(String obname);
 
 	/**
 	 * @return the obalias
@@ -164,7 +164,7 @@ public interface Base {
 	/**
 	 * @param obalias the obalias to set
 	 */
-	void setObalias(String obalias);
+	Base setObalias(String obalias);
 
 	/**
 	 * @return the obtitle
@@ -174,7 +174,7 @@ public interface Base {
 	/**
 	 * @param obtitle the obtitle to set
 	 */
-	void setObtitle(String obtitle);
+	Base setObtitle(String obtitle);
 
 	/**
 	 * @return the obdescription
@@ -184,7 +184,7 @@ public interface Base {
 	/**
 	 * @param obdescription the obdescription to set
 	 */
-	void setObdescription(String obdescription);
+	Base setObdescription(String obdescription);
 
 	/**
 	 * @return the obroot
@@ -194,7 +194,7 @@ public interface Base {
 	/**
 	 * @param obroot the obroot to set
 	 */
-	void setObroot(String obroot);
+	Base setObroot(String obroot);
 	
 	/**
 	 * @return the obmime
@@ -204,7 +204,7 @@ public interface Base {
 	/**
 	 * @param obmime the obmime to set
 	 */
-	void setObmime(String obmime);
+	Base setObmime(String obmime);
 
 	/**
 	 * @return the obdata
@@ -214,7 +214,7 @@ public interface Base {
 	/**
 	 * @param obdata the obdata to set
 	 */
-	void setObdata(String obdata);
+	Base setObdata(String obdata);
 
 	/**
 	 * @return the oburi
@@ -224,7 +224,7 @@ public interface Base {
 	/**
 	 * @param oburi the oburi to set
 	 */
-	void setOburi(String oburi);
+	Base setOburi(String oburi);
 
 	/**
 	 * @return the oblink
@@ -234,7 +234,7 @@ public interface Base {
 	/**
 	 * @param oblink the oblink to set
 	 */
-	void setOblink(String oblink);
+	Base setOblink(String oblink);
 	
 	/**
 	 * @return the linkuuid
@@ -244,10 +244,10 @@ public interface Base {
 	/**
 	 * @param linkuuid the linkuuid to set
 	 */
-	void setLinkuuid(String linkuuid);
+	Base setLinkuuid(String linkuuid);
 	
 	/**
 	 * The refresh
 	 */
-	void refresh();
+	Base refresh();
 }

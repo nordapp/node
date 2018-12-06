@@ -12,7 +12,7 @@ public interface Item {
 	/**
 	 * @param props
 	 */
-	void setProperties(Map<String,ObProperty> props);
+	Item setProperties(Map<String,ObProperty> props);
 	
 	/**
 	 * @return
@@ -22,6 +22,19 @@ public interface Item {
 	/**
 	 * @param nodes
 	 */
-	void setNodes(Map<String,Node> nodes);
-
+	Item setNodes(Map<String,Node> nodes);
+	
+	/**
+	 * @param key
+	 * @param prop
+	 * @return
+	 */
+	Item put(String key, ObProperty prop);
+	
+	/**
+	 * @param key
+	 * @param node
+	 * @return
+	 */
+	Item put(String key, Node node);
 }

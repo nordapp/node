@@ -110,6 +110,16 @@ public class BaseImpl implements Base {
 	// End
 	//------------------------------------------------
 	
+	/**
+	 * @return
+	 */
+	public static Base of() {
+		return new BaseImpl();
+	}
+	
+	/**
+	 * 
+	 */
 	public BaseImpl() {
 		obid = null;
 		obguid = null;
@@ -118,7 +128,7 @@ public class BaseImpl implements Base {
 		obutime = null;
 		obhistory = null;
 		obhash = null;
-		obflags = BigInteger.ZERO;
+		obflags = null;
 		obname = null;
 		obalias = null;
 		obtitle = null;
@@ -141,8 +151,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obid the obid to set
 	 */
-	public void setObid(Long obid) {
+	public Base setObid(Long obid) {
 		this.obid = obid;
+		return this;
 	}
 
 	/**
@@ -155,8 +166,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obguid the obguid to set
 	 */
-	public void setObguid(Long obguid) {
+	public Base setObguid(Long obguid) {
 		this.obguid = obguid;
+		return this;
 	}
 
 	/**
@@ -176,8 +188,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obctime the obctime to set
 	 */
-	public void setObctime(GregorianCalendar obctime) {
+	public Base setObctime(GregorianCalendar obctime) {
 		this.obctime = obctime;
+		return this;
 	}
 
 	/**
@@ -190,15 +203,17 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obutime the obutime to set
 	 */
-	public void setObutime(GregorianCalendar obutime) {
+	public Base setObutime(GregorianCalendar obutime) {
 		this.obutime = obutime;
+		return this;
 	}
 
 	/**
 	 * @param obuuid the obuuid to set
 	 */
-	public void setObuuid(String obuuid) {
+	public Base setObuuid(String obuuid) {
 		this.obuuid = obuuid;
+		return this;
 	}
 
 	/**
@@ -211,8 +226,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obhistory the obhistory to set
 	 */
-	public void setObhistory(String obhistory) {
+	public Base setObhistory(String obhistory) {
 		this.obhistory = obhistory;
+		return this;
 	}
 	
 	/**
@@ -225,8 +241,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obhash the obhash to set
 	 */
-	public void setObhash(Long obhash) {
+	public Base setObhash(Long obhash) {
 		this.obhash = obhash;
+		return this;
 	}
 
 	/**
@@ -239,8 +256,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obflags the obflags to set
 	 */
-	public void setObflags(BigInteger obflags) {
+	public Base setObflags(BigInteger obflags) {
 		this.obflags = obflags;
+		return this;
 	}
 
 	/**
@@ -253,8 +271,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obname the obname to set
 	 */
-	public void setObname(String obname) {
+	public Base setObname(String obname) {
 		this.obname = obname;
+		return this;
 	}
 
 	/**
@@ -267,8 +286,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obalias the obalias to set
 	 */
-	public void setObalias(String obalias) {
+	public Base setObalias(String obalias) {
 		this.obalias = obalias;
+		return this;
 	}
 
 	/**
@@ -281,8 +301,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obtitle the obtitle to set
 	 */
-	public void setObtitle(String obtitle) {
+	public Base setObtitle(String obtitle) {
 		this.obtitle = obtitle;
+		return this;
 	}
 
 	/**
@@ -295,8 +316,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obdescription the obdescription to set
 	 */
-	public void setObdescription(String obdescription) {
+	public Base setObdescription(String obdescription) {
 		this.obdescription = obdescription;
+		return this;
 	}
 
 	/**
@@ -309,8 +331,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obroot the obroot to set
 	 */
-	public void setObroot(String obroot) {
+	public Base setObroot(String obroot) {
 		this.obroot = obroot;
+		return this;
 	}
 	
 	/**
@@ -323,8 +346,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obmime the obmime to set
 	 */
-	public void setObmime(String obmime) {
+	public Base setObmime(String obmime) {
 		this.obmime = obmime;
+		return this;
 	}
 
 	/**
@@ -337,8 +361,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param obdata the obdata to set
 	 */
-	public void setObdata(String obdata) {
+	public Base setObdata(String obdata) {
 		this.obdata = obdata;
+		return this;
 	}
 
 	/**
@@ -351,8 +376,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param oburi the oburi to set
 	 */
-	public void setOburi(String oburi) {
+	public Base setOburi(String oburi) {
 		this.oburi = oburi;
+		return this;
 	}
 
 	/**
@@ -365,8 +391,9 @@ public class BaseImpl implements Base {
 	/**
 	 * @param oblink the oblink to set
 	 */
-	public void setOblink(String oblink) {
+	public Base setOblink(String oblink) {
 		this.oblink = oblink;
+		return this;
 	}
 	
 	/**
@@ -379,54 +406,106 @@ public class BaseImpl implements Base {
 	/**
 	 * @param linkuuid the linkuuid to set
 	 */
-	public void setLinkuuid(String linkuuid) {
+	public Base setLinkuuid(String linkuuid) {
 		this.linkuuid = linkuuid;
+		return this;
 	}
 
 	/**
 	 * After every change of a property 'refresh' has to be called
 	 */
-	public void refresh() {
+	public Base refresh() {
 		
 		//
 		// To update the object
 		//
+		return this;
 	}
-
-	// --------------------------------------------------------------------
-	// Static tools
-	// --------------------------------------------------------------------
-
+	
 	/**
-	 * Replace the '.' with the id
-	 * protect with '\\'
+	 * The hashCode is a similar implementation as in the HashMap
 	 * 
-	 * @param param The parameter
-	 * @param id The id to insert
+	 * As a consequence, two objects can have the same hashCode but
+	 * are not equal.
+	 * 
+	 * @see java.util.AbstractHashMap#equals(java.lang.Object)
+	 * @see java.lang.Object#equals(java.lang.Object)
 	 */
-	public static final String setCurrentId(String param, String id) {
-		StringBuffer buf = new StringBuffer();
-		char[] cc = param.toCharArray();
+	public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if(!(o instanceof Base))
+        	return false;
+        Base b = (Base)o;
 		
-		for(int i=0;i<cc.length;i++){
-			//protected char
-			if(cc[i]=='\\') {
-				if((i+1)<cc.length){
-					i++;
-					buf.append(cc[i]);
-				}//fi
-				//else does nothing
-			}
-			//replace '.'
-			else if(cc[i]=='.'){
-				buf.append(id);
-			}
-			//any other character
-			else{
-				buf.append(cc[i]);
-			}//fi
-		}//for
+        return eq(obid, b.getObid()) &&
+        		eq(obguid, b.getObguid()) &&
+        		eq(obuuid, b.getObuuid()) &&
+        		eq(obctime, b.getObctime()) &&
+        		eq(obutime, b.getObutime()) &&
+        		eq(obhistory, b.getObhistory()) &&
+        		eq(obhash, b.getObhash()) &&
+        		eq(obflags, b.getObflags()) &&
+        		eq(obname, b.getObname()) &&
+        		eq(obalias, b.getObalias()) &&
+        		eq(obtitle, b.getObtitle()) &&
+        		eq(obdescription, b.getObdescription()) &&
+        		eq(obroot, b.getObroot()) &&
+        		eq(obmime, b.getObmime()) &&
+        		eq(obdata, b.getObdata()) &&
+        		eq(oburi, b.getOburi()) &&
+        		eq(oblink, b.getOblink()) &&
+        		eq(linkuuid, b.getLinkuuid());
+	}
+	
+	/**
+	 * @param a
+	 * @param b
+	 * @return
+	 */
+	private boolean eq(Object a, Object b) {
+		return (a==null && b==null) ? true :
+			(a==null || b==null) ? false :
+				a.equals(b);
+	}
+	
+	/**
+	 * The hashCode is a similar implementation as in the HashMap
+	 * 
+	 * As a consequence, two objects can have the same hashCode but
+	 * are not equal.
+	 * 
+	 * @see java.util.AbstractHashMap#hashCode()
+	 * @see java.lang.Object#hashCode()
+	 */
+	public int hashCode() {
+		int h = 0;
+		h = h + ( (obid==null) ? 0 : obid.hashCode() );
+		h = h + ( (obguid==null) ? 0 : obguid.hashCode() );
+		h = h + ( (obuuid==null) ? 0 : obuuid.hashCode() );
+		h = h + ( (obctime==null) ? 0 : obctime.hashCode() );
+		h = h + ( (obutime==null) ? 0 : obutime.hashCode() );
+		h = h + ( (obhistory==null) ? 0 : obhistory.hashCode() );
+		h = h + ( (obhash==null) ? 0 : obhash.hashCode() );
+		h = h + ( (obflags==null) ? 0 : obflags.hashCode() );
+		h = h + ( (obname==null) ? 0 : obname.hashCode() );
+		h = h + ( (obalias==null) ? 0 : obalias.hashCode() );
+		h = h + ( (obtitle==null) ? 0 : obtitle.hashCode() );
+		h = h + ( (obdescription==null) ? 0 : obdescription.hashCode() );
+		h = h + ( (obroot==null) ? 0 : obroot.hashCode() );
+		h = h + ( (obmime==null) ? 0 : obmime.hashCode() );
+		h = h + ( (obdata==null) ? 0 : obdata.hashCode() );
+		h = h + ( (oburi==null) ? 0 : oburi.hashCode() );
+		h = h + ( (oblink==null) ? 0 : oblink.hashCode() );
+		h = h + ( (linkuuid==null) ? 0 : linkuuid.hashCode() );
 		
-		return buf.toString();
+		return h;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString() {
+		return BaseTool.toString(this);
 	}
 }

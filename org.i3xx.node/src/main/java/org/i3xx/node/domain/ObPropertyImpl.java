@@ -2,6 +2,7 @@ package org.i3xx.node.domain;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.Arrays;
 import java.util.GregorianCalendar;
 
 public class ObPropertyImpl implements ObProperty {
@@ -71,6 +72,77 @@ public class ObPropertyImpl implements ObProperty {
 		this.bigdecimalValue = bigdecimalValue;
 		this.calendarValue = calendarValue;
 		this.byteaValue = bytea;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#hashCode()
+	 */
+	public int hashCode() {
+		if(stringValue!=null) {
+			return stringValue.hashCode();
+		}
+		else if(booleanValue!=null) {
+			return booleanValue.hashCode();
+		}
+		else if(longValue!=null) {
+			return longValue.hashCode();
+		}
+		else if(doubleValue!=null) {
+			return doubleValue.hashCode();
+		}
+		else if(bigintValue!=null) {
+			return bigintValue.hashCode();
+		}
+		else if(bigdecimalValue!=null) {
+			return bigdecimalValue.hashCode();
+		}
+		else if(calendarValue!=null) {
+			return calendarValue.hashCode();
+		}
+		else if(byteaValue!=null) {
+			return byteaValue.hashCode();
+		}
+		else
+			return 0;
+	}
+	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof ObProperty))
+            return false;
+        
+        ObProperty p = (ObProperty)o;
+		if(stringValue!=null && p.getStringValue()!=null) {
+			return stringValue.equals(p.getStringValue());
+		}
+		else if(booleanValue!=null && p.getBooleanValue()!=null) {
+			return booleanValue.equals(p.getBooleanValue());
+		}
+		else if(longValue!=null && p.getLongValue()!=null) {
+			return longValue.equals(p.getLongValue());
+		}
+		else if(doubleValue!=null && p.getDoubleValue()!=null) {
+			return doubleValue.equals(p.getDoubleValue());
+		}
+		else if(bigintValue!=null && p.getBigintValue()!=null) {
+			return bigintValue.equals(p.getBigintValue());
+		}
+		else if(bigdecimalValue!=null && p.getBigdecimalValue()!=null) {
+			return bigdecimalValue.equals(p.getBigdecimalValue());
+		}
+		else if(calendarValue!=null && p.getCalendarValue()!=null) {
+			return calendarValue.equals(p.getCalendarValue());
+		}
+		else if(byteaValue!=null && p.getByteaValue()!=null) {
+			return Arrays.equals(byteaValue, p.getByteaValue());
+		}
+		else {
+			return false;
+		}
 	}
 
 	/**
